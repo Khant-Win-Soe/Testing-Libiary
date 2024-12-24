@@ -1,0 +1,47 @@
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var();
+}
+label,
+input {
+  width: 100%;
+}
+.input_box {
+  position: relative;
+}
+input {
+  padding: 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  //   transition: all 0.05s ease-out;
+}
+input:focus {
+  box-shadow: 0 0 10px var(--primary-color);
+  outline: none;
+}
+
+input:hover {
+  border: 1px solid var(--info-color);
+}
+
+input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+svg {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1s ease-in forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

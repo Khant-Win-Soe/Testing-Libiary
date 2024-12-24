@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+// @import './styles/global-variable.scss';
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("./assets/fonts/Poppins.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pyidaungsu";
+  src: local("Pyidaungsu"),
+    url("./assets/fonts/Pyidaungsu.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", "Pyidaungsu", sans-serif !important;
+  width: 100vw;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}

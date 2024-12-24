@@ -1,1 +1,27 @@
-<p>text-box works Change! </p>
+<div class="form-group">
+  <label>{{ label }}</label>
+
+  <input
+    [type]="type"
+    class="form-control"
+    [formControl]="control"
+    [attr.placeholder]="placeHolder"
+    [readOnly]="isReadOnly"
+    [required]="true"
+  />
+
+  <div
+    *ngIf="
+      onSubmit !== false && !isReadOnly && control.invalid && control.touched
+    "
+    class="text-danger"
+  >
+    <p [hidden]="!control.errors?.['required']">This field is required.</p>
+    <p [hidden]="!control.errors?.['minlength']">
+      <!-- Min Length is {{ minLength }}. -->
+    </p>
+    <p [hidden]="!control.errors?.['maxlength']">
+      <!-- Max Length is {{ minLength }}. -->
+    </p>
+  </div>
+</div>

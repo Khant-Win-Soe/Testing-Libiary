@@ -1,0 +1,39 @@
+<div class="login_parent">
+  <form
+    action=""
+    class="login_form"
+    [formGroup]="loginForm"
+    (ngSubmit)="submit()"
+    novalidate
+  >
+    <div class="mb-3 login_text">Login</div>
+    <div class="mb-3">
+      <lib-text-box
+        label="User Name"
+        placeHolder="Enter Your Name"
+        [control]="loginForm.controls.name"
+        [isDisable]="true"
+      />
+    </div>
+    <div class="mb-3">
+      <lib-text-box
+        label="Password"
+        placeHolder="Enter Your Password"
+        type="password"
+        [onSubmitted]="showValidate"
+        [control]="loginForm.controls.password"
+      />
+    </div>
+    <!-- <div class="mb-3">
+      <lib-nrc-box label="NRC Number" />
+    </div> -->
+    <button type="submit" class="btn btn-primary w-100">Log In</button>
+  </form>
+</div>
+
+<ng-container *ngIf="showValidate">
+  <p>
+    name: {{ loginForm.controls.name.value }} password:
+    {{ loginForm.controls.password.value }}
+  </p>
+</ng-container>
