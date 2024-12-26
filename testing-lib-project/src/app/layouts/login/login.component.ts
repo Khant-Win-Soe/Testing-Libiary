@@ -11,6 +11,10 @@ export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^09\d{9}$/),
+    ]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(8),

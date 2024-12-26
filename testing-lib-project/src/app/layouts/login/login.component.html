@@ -28,11 +28,12 @@
 
     <div class="mb-3">
       <lib-input-box
-        label="Your Email"
-        placeHolder="simple@gmail.com"
+        label="Your Phone Number"
+        placeHolder="09 #### #####"
         type="number"
         [onSubmitted]="showValidate"
-        [control]="loginForm.controls.email"
+        [control]="loginForm.controls.phone"
+        [validatePatternMessage]="'Please Fill Start with 09 number'"
       />
     </div>
 
