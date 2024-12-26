@@ -8,14 +8,15 @@
   >
     <div class="mb-3 login_text">Login</div>
     <div class="mb-3">
-      <lib-text-box
+      <lib-input-box
         label="User Name"
         placeHolder="Enter Your Name"
         [control]="loginForm.controls.name"
       />
     </div>
+
     <div class="mb-3">
-      <lib-text-box
+      <lib-input-box
         label="Your Eamil"
         placeHolder="simple@gmail.com"
         type="email"
@@ -24,8 +25,9 @@
         [control]="loginForm.controls.email"
       />
     </div>
+
     <div class="mb-3">
-      <lib-text-box
+      <lib-input-box
         label="Your Email"
         placeHolder="simple@gmail.com"
         type="number"
@@ -33,8 +35,9 @@
         [control]="loginForm.controls.email"
       />
     </div>
+
     <div class="mb-3">
-      <lib-text-box
+      <lib-input-box
         label="Password"
         placeHolder="Enter Your Password"
         type="password"
@@ -42,6 +45,7 @@
         [control]="loginForm.controls.password"
       />
     </div>
+
     <!-- <div class="mb-3">
       <lib-nrc-box label="NRC Number" />
     </div> -->

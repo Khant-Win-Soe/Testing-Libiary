@@ -3,11 +3,11 @@ import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   standalone: false,
-  selector: 'lib-text-box',
-  templateUrl: './text-box.component.html',
-  styleUrl: './text-box.component.scss',
+  selector: 'lib-input-box',
+  templateUrl: './input-box.component.html',
+  styleUrl: './input-box.component.scss',
 })
-export class TextBoxComponent implements DoCheck {
+export class InputBoxComponent implements DoCheck {
   //Error Message
   @Input() validateRequiredMessage: string = 'This field can not be empty';
   @Input() validateMinLengthMessage: string =
@@ -20,19 +20,20 @@ export class TextBoxComponent implements DoCheck {
   @Input() validateCustomMessage: string = 'Custom validation failed';
 
   //For Style
-  @Input() textBoxParentDiv: string = 'lib_text_box_parent';
-  @Input() textBoxLabelStyle: string = 'lib_text_box_label';
-  @Input() textBoxInputStyle: string = 'lib_text_box_input';
-  @Input() textBoxIconStyle: string = '';
-  @Input() textBoxErrorMessageStyle: string = 'lib_text_box_error';
+  @Input() inputBoxParentDiv: string = 'lib_input_box_parent';
+  @Input() inputBoxLabelStyle: string = 'lib_input_box_label';
+  @Input() inputBoxInputStyle: string = 'lib_input_box_input';
+  @Input() inputBoxIconStyle: string = '';
+  @Input() inputBoxErrorMessageStyle: string = 'lib_input_box_error';
 
   //For Value
   @Input() label: string = '';
   @Input() placeHolder: string = '';
   @Input() type: string = 'text';
 
+  @Input() wheelPrevent: boolean = true;
+  @Input() copyPastePrevent: boolean = false;
   @Input() isReadOnly: boolean = false;
-
   @Input() set isDisable(data: boolean) {
     if (data) this.control.disable();
   }
@@ -70,5 +71,11 @@ export class TextBoxComponent implements DoCheck {
       !this.isReadOnly &&
       this.control.invalid &&
       this.control.touched;
+  }
+  onWheel(event: WheelEvent) {
+    if (this.wheelPrevent) event.preventDefault(); // Prevent the scroll wheel from changing the input value
+  }
+  onCopyPaste(event: ClipboardEvent) {
+    if (this.copyPastePrevent) event.preventDefault(); // Disable copy, cut, and paste
   }
 }
