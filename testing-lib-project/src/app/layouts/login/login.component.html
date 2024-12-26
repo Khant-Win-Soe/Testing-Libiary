@@ -1,6 +1,6 @@
 <div class="login_parent">
   <form
-    action=""
+    *ngIf="!isLoading"
     class="login_form"
     [formGroup]="loginForm"
     (ngSubmit)="submit()"
@@ -12,7 +12,25 @@
         label="User Name"
         placeHolder="Enter Your Name"
         [control]="loginForm.controls.name"
-        [isDisable]="true"
+      />
+    </div>
+    <div class="mb-3">
+      <lib-text-box
+        label="Your Eamil"
+        placeHolder="simple@gmail.com"
+        type="email"
+        [onSubmitted]="showValidate"
+        [isReadOnly]="true"
+        [control]="loginForm.controls.email"
+      />
+    </div>
+    <div class="mb-3">
+      <lib-text-box
+        label="Your Email"
+        placeHolder="simple@gmail.com"
+        type="number"
+        [onSubmitted]="showValidate"
+        [control]="loginForm.controls.email"
       />
     </div>
     <div class="mb-3">
@@ -29,11 +47,5 @@
     </div> -->
     <button type="submit" class="btn btn-primary w-100">Log In</button>
   </form>
+  <ng-lottie *ngIf="isLoading" [options]="options"></ng-lottie>
 </div>
-
-<ng-container *ngIf="showValidate">
-  <p>
-    name: {{ loginForm.controls.name.value }} password:
-    {{ loginForm.controls.password.value }}
-  </p>
-</ng-container>

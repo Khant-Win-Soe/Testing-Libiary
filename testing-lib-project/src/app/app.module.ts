@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './layouts/login/login.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { LottieComponent, provideLottieOptions } from 'ngx-lottie';
 @NgModule({
   declarations: [AppComponent, LoginComponent],
   imports: [
@@ -19,8 +19,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     MyLibModule,
     AppRoutingModule,
+    LottieComponent,
   ],
-  providers: [provideClientHydration(withEventReplay())],
+  providers: [
+    provideClientHydration(withEventReplay()),
+    provideLottieOptions({
+      player: () => import('lottie-web'),
+    }),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

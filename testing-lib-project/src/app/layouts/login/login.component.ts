@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
-import { log } from 'console';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AnimationOptions } from 'ngx-lottie';
 @Component({
   selector: 'app-login',
   standalone: false,
@@ -16,17 +10,26 @@ import { log } from 'console';
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(8),
       Validators.maxLength(10),
     ]),
   });
+
   showValidate: boolean = false;
+  isLoading: boolean = false;
+
+  options: AnimationOptions = {
+    path: '../../../assets/json/animations/Animation - Hand Loading.json',
+  };
+
   ngOnInit(): void {
     this.loginForm.patchValue({
-      name: 'John Doe',
-      password: 'john.doe@example.com',
+      name: '',
+      email: 'john.doe@example.com',
+      password: '',
     });
   }
   submit() {
@@ -37,8 +40,13 @@ export class LoginComponent implements OnInit {
     //   control?.markAsTouched({ onlySelf: true }); // {3}
     // });
     if (!this.loginForm.invalid) {
-      alert('fail');
+      this.isLoading = true;
+
+      setTimeout(() => {
+        this.isLoading = false;
+        alert('Login Success');
+      }, 1000);
+      // console.log(this.loginForm);
     }
-    // console.log(this.loginForm);
   }
 }

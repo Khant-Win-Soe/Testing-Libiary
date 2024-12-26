@@ -18,10 +18,10 @@ export function gtec(val: number): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     let v: number = +control.value;
     if (isNaN(v)) {
-      return { gte: true, requiredValue: val };
+      return { gtec: true, requiredValue: val };
     }
     if (v <= +val) {
-      return { gte: true, requiredValue: val };
+      return { gtec: true, requiredValue: val };
     }
 
     return null;
