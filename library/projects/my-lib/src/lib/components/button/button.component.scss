@@ -1,13 +1,19 @@
 /* General button styles */
 button {
   cursor: pointer;
-  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border: none;
   color: var(--lib-white-color);
   background-color: var(--lib-primary-color);
   font-size: var(--lib-text-font-size);
   transition: background-color 0.3s ease;
+}
+.icon {
+  margin: 4px 8px;
 }
 button:hover {
   filter: brightness(90%);
@@ -57,6 +63,5 @@ button:hover {
 
 .circle {
   border-radius: var(--lib-border-radius-circle);
-  width: auto !important;
   aspect-ratio: 1;
 }

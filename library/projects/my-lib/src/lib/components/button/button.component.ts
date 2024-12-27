@@ -49,6 +49,7 @@ export class ButtonComponent implements OnInit {
   @Input() buttonHeight: string = '';
   @Input() buttonPadding: string = '';
   @Input() customClass: string = '';
+  @Input() buttonIconClass: string = '';
   @Input() buttonColor: ButtonColorType = ButtonColorStyles.primary;
   @Input() buttonRadius: ButtonRadiusType = ButtonRadiusStyles.normal;
 
@@ -64,7 +65,7 @@ export class ButtonComponent implements OnInit {
     this.currentStyles = {
       width: this.buttonWidth ? this.buttonWidth : '100%',
       height: this.buttonHeight ? this.buttonHeight : '100%',
-      padding: this.buttonPadding ? this.buttonPadding : '4px',
+      padding: this.buttonPadding ? this.buttonPadding : '8px',
     };
   }
 
