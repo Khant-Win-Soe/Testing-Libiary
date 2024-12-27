@@ -1,64 +1,28 @@
+:root {
+  //library variable
+  --lib-label-color: #395a59;
+  --lib-white-color: #ffffff;
+  --lib-primary-color: #4204ff;
+  --lib-success-color: #00ff11;
+  --lib-warning-color: #fcd200;
+  --lib-info-color: #04eeff;
+  --lib-danger-color: #ff0000;
+  --lib-hover-color: #eeeeee;
 
-// color
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$success-color: #28a745;
-$danger-color: #dc3545;
-$warning-color: #ffc107;
-$info-color: #17a2b8;
-$light-color: #f8f9fa;
-$dark-color: #343a40;
+  --lib-border-radius-sm: 0.25rem; /* 4px */
+  --lib-border-radius: 0.5rem; /* 8px */
+  --lib-border-radius-lg: 1rem; /* 16px */
+  --lib-border-radius-rounded: 3rem; /* 50px */
+  --lib-border-radius-circle: 50%;
 
-$text-color: #212529;
-$text-muted-color: #6c757d;
-$background-color: #ffffff;
-$border-color: #dee2e6;
+  --lib-input-border: 1px solid var(--lib-primary-color);
+  --lib-input-border-hover: 1px solid var(--lib-hover-color);
+  --lib-input-box-shadow: 0 0 10px var(--lib-primary-color);
+  --lib-input-border-error: 2px solid var(--lib-danger-color);
 
-// font
-$font-family-sans: "Roboto", Arial, sans-serif;
-$font-family-mono: "Courier New", monospace;
-
-$font-size-small: 0.875rem; /* 14px */
-$font-size-base: 1rem; /* 16px */
-$font-size-large: 1.25rem; /* 20px */
-$font-size-h1: 2.5rem; /* 40px */
-$font-size-h2: 2rem; /* 32px */
-$font-size-h3: 1.75rem; /* 28px */
-
-$line-height: 1.5;
-
-// spacing
-$spacing-xs: 0.25rem; /* 4px */
-$spacing-sm: 0.5rem; /* 8px */
-$spacing-md: 1rem; /* 16px */
-$spacing-lg: 1.5rem; /* 24px */
-$spacing-xl: 2rem; /* 32px */
-
-// border
-$border-width: 1px;
-$border-radius-sm: 0.2rem;
-$border-radius: 0.25rem;
-$border-radius-lg: 0.3rem;
-$border-radius-circle: 50%;
-
-// box shadow
-$box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-$box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-$box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
-
-// transition
-$transition-fast: 0.2s ease-in-out;
-$transition-normal: 0.3s ease-in-out;
-$transition-slow: 0.5s ease-in-out;
-
-$animation-duration-short: 200ms;
-$animation-duration-medium: 400ms;
-$animation-duration-long: 600ms;
-
-// breakpoint
-$breakpoint-xs: 320px;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-
+  --lib-label-margin: 0 0 8px 0;
+  --lib-input-padding: 8px;
+  --lib-label-font-size: 0.875rem; /* 14px */
+  --lib-text-font-size: 0.875rem; /* 14px */
+  --lib-error-font-size: 0.75rem; /* 12px */
+}
