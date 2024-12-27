@@ -12,8 +12,9 @@
 .lib_input_box_input {
   padding: var(--lib-input-padding);
   border: var(--lib-input-border);
-  border-radius: var(--lib-input-border-radius);
+  border-radius: var(--lib-border-radius);
 }
+
 .lib_input_box_input:focus {
   box-shadow: var(--lib-input-box-shadow);
   outline: none;
@@ -28,7 +29,7 @@
 
 .lib_input_box_error {
   font-size: var(--lib-error-font-size);
-  color: var(--lib-error-color);
+  color: var(--lib-danger-color);
 }
 .input_div {
   position: relative;

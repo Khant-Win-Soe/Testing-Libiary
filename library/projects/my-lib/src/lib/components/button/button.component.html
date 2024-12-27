@@ -1,1 +1,7 @@
-<p>button works!</p>
+<button
+  (click)="onClick()"
+  [ngClass]="[buttonColor, buttonRadius, customClass]"
+  [ngStyle]="currentStyles"
+>
+  {{ buttonText }}
+</button>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ButtonColorStyles, ButtonRadiusStyles } from 'my-library';
 import { AnimationOptions } from 'ngx-lottie';
 @Component({
   selector: 'app-login',
@@ -8,6 +9,9 @@ import { AnimationOptions } from 'ngx-lottie';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnInit {
+  protected buttonColor = ButtonColorStyles;
+  protected buttonRadius = ButtonRadiusStyles;
+
   loginForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),

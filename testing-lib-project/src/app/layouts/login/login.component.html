@@ -29,7 +29,7 @@
     <div class="mb-3">
       <lib-input-box
         label="Your Phone Number"
-        placeHolder="09 #### #####"
+        placeHolder="09#########"
         type="number"
         [onSubmitted]="showValidate"
         [control]="loginForm.controls.phone"
@@ -47,10 +47,32 @@
       />
     </div>
 
+    <div class="mb-3">
+      <lib-button
+        buttonText="Log In"
+        (buttonClick)="submit()"
+        buttonPadding="10px"
+        buttonHeight="40px"
+        [buttonColor]="buttonColor.primary"
+        [buttonRadius]="buttonRadius.normal"
+      />
+    </div>
+
+    <div class="mb-3">
+      <lib-button
+        buttonText="Creat Account"
+        (buttonClick)="submit()"
+        buttonPadding="10px"
+        buttonHeight="40px"
+        [buttonColor]="buttonColor.secondary"
+        [buttonRadius]="buttonRadius.normal"
+      />
+    </div>
+
     <!-- <div class="mb-3">
       <lib-nrc-box label="NRC Number" />
     </div> -->
-    <button type="submit" class="btn btn-primary w-100">Log In</button>
+    <!-- <button type="submit" class="btn btn-primary w-100">Log In</button> -->
   </form>
   <ng-lottie *ngIf="isLoading" [options]="options"></ng-lottie>
 </div>
