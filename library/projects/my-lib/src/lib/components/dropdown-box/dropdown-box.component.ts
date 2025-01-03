@@ -10,6 +10,13 @@ export class DropDownDataModel {}
   styleUrl: './dropdown-box.component.scss',
 })
 export class DropdownBoxComponent {
+  //For Style
+  @Input() dropDownParentDiv: string = 'lib_dropdown_box_parent';
+  @Input() dropDownLabelStyle: string = 'lib_dropdown_box_label';
+  @Input() dropDownInputStyle: string = 'lib_dropdown_box_input';
+  @Input() dropDownIconStyle: string = '';
+  @Input() dropDownErrorMessageStyle: string = 'lib_dropdown_box_error';
+
   @Input() label: string = '';
   @Input() placeholder: string = 'Select an option';
   @Input() isDisabled: boolean = false;

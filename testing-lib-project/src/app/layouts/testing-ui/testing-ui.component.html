@@ -1,0 +1,8 @@
+<div class="parent">
+  <lib-button
+    (buttonClick)="onClick()"
+    buttonColor="primary"
+    buttonText="Show Alert"
+  />
+  <lib-alert-box [(alertOn)]="showAlert" alertType="default" />
+</div>

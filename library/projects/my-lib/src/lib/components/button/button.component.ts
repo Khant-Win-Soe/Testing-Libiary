@@ -54,6 +54,9 @@ export class ButtonComponent implements OnInit {
   @Input() buttonRadius: ButtonRadiusType = ButtonRadiusStyles.normal;
 
   @Output() buttonClick = new EventEmitter<void>();
+  @Output() mouseDown = new EventEmitter<void>();
+  @Output() mouseUp = new EventEmitter<void>();
+  @Output() mouseLeave = new EventEmitter<void>();
 
   currentStyles: Record<string, string> = {};
 
@@ -69,7 +72,16 @@ export class ButtonComponent implements OnInit {
     };
   }
 
-  onClick() {
+  click() {
     this.buttonClick.emit();
+  }
+  mDown() {
+    this.mouseDown.emit();
+  }
+  mUp() {
+    this.mouseUp.emit();
+  }
+  mLeave() {
+    this.mouseLeave.emit();
   }
 }

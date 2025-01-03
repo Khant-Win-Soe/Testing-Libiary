@@ -11,8 +11,9 @@ import { LoginComponent } from './layouts/login/login.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LottieComponent, provideLottieOptions } from 'ngx-lottie';
+import { TestingUiComponent } from './layouts/testing-ui/testing-ui.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, TestingUiComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

@@ -20,10 +20,12 @@
   --lib-input-border: 1px solid var(--lib-primary-color);
   --lib-input-border-hover: 1px solid var(--lib-hover-color);
   --lib-input-box-shadow: 0 0 10px var(--lib-primary-color);
+  --lib-card-box-shadow: 0 4px 6px var(--lib-label-color);
   --lib-input-border-error: 2px solid var(--lib-danger-color);
 
   --lib-label-margin: 0 0 8px 0;
   --lib-input-padding: 8px;
+  --lib-header-font-size: 1rem; /* 16px */
   --lib-label-font-size: 0.875rem; /* 14px */
   --lib-text-font-size: 0.875rem; /* 14px */
   --lib-error-font-size: 0.75rem; /* 12px */

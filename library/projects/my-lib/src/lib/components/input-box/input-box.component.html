@@ -1,5 +1,5 @@
 <div [ngClass]="inputBoxParentDiv">
-  <label [ngClass]="inputBoxLabelStyle">{{ label }}</label>
+  <label [ngClass]="inputBoxLabelStyle" [hidden]="!label">{{ label }}</label>
 
   <div class="input_div">
     <input
