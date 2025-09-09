@@ -11,6 +11,7 @@ import { FileUploadPreviewComponent } from './components/file-upload-preview/fil
 import { InputBoxComponent } from './components/input-box/input-box.component';
 import { NrcBoxComponent } from './components/nrc-box/nrc-box.component';
 import { RadioBoxComponent } from './components/radio-box/radio-box.component';
+import { VideoRecoderComponent } from './components/video-recoder/video-recoder.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,9 @@ import { RadioBoxComponent } from './components/radio-box/radio-box.component';
     InputBoxComponent,
     NrcBoxComponent,
     RadioBoxComponent,
+    VideoRecoderComponent,
   ],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, BrowserModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
     MyLibComponent,
     AlertBoxComponent,
@@ -35,6 +37,7 @@ import { RadioBoxComponent } from './components/radio-box/radio-box.component';
     InputBoxComponent,
     NrcBoxComponent,
     RadioBoxComponent,
+    VideoRecoderComponent,
   ],
   bootstrap: [NrcBoxComponent],
 })

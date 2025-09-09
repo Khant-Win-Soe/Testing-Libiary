@@ -13,3 +13,4 @@ export * from './lib/components/file-upload-preview/file-upload-preview.componen
 export * from './lib/components/input-box/input-box.component';
 export * from './lib/components/nrc-box/nrc-box.component';
 export * from './lib/components/radio-box/radio-box.component';
+export * from './lib/components/video-recoder/video-recoder.component';
